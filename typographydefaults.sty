@@ -1,0 +1,111 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{typographydefaults}[2015/06/04]
+
+\RequirePackage{pdftexcmds}
+\RequirePackage{kvoptions} % key-value options
+
+\RequirePackage{xunicode}  % convert accented characters to unicode glyphs
+\RequirePackage{xunicode-addon}
+
+\RequirePackage{fontspec}     % opentype typography
+\RequirePackage{unicode-math} % provide ‘\setmathfont’
+
+\RequirePackage{microtype}
+
+\SetupKeyvalOptions{ family = tpdf
+                   , prefix = tpdf@
+                   }
+
+% package options
+\DeclareStringOption[normal]{size}     % text sizes
+\DeclareStringOption[garalde]{text}    % roman and italics for text
+\DeclareStringOption[programmer]{mono} % monospaced faces for code segments
+%\DeclareStringOption{emph}[italic]     % italics or blackletter for emphasis
+
+\ProcessKeyvalOptions{tpdf}
+
+% initialisation
+\defaultfontfeatures{ Ligatures = { Required
+                                  , Common
+                                  , Contextual
+                                  , Rare
+                                  }
+                    , Numbers     = OldStyle
+                    }
+
+% text type families
+\def\TPDFTypeMedieval {Junicode}
+\def\TPDFTypeHumanist {Centaur MT Std}
+\def\TPDFTypeGaralde  {Adobe Garamond Pro}
+\def\TPDFTypeRealist  {Fairfield LT Std}
+\def\TPDFTypeModern   {Didot LT Std}
+\def\TPDFTypeMechanist{Caecilia LT Std}
+\def\TPDFTypeMillenial{Warnock Pro}
+\def\TPDFTypeGrotesque{Grotesque MT Std}
+\def\TPDFTypeGeometric{Futura Std}
+
+\ifnum\pdf@strcmp{\tpdf@text}{medieval}=0%
+  \setmainfont{\TPDFTypeMedieval}
+\fi
+\ifnum\pdf@strcmp{\tpdf@text}{humanist}=0%
+  \setmainfont{\TPDFTypeHumanist}
+\fi
+\ifnum\pdf@strcmp{\tpdf@text}{garalde}=0%
+  \setmainfont{\TPDFTypeGaralde}
+\fi
+\ifnum\pdf@strcmp{\tpdf@text}{realist}=0%
+  \setmainfont{\TPDFTypeRealist}
+\fi
+\ifnum\pdf@strcmp{\tpdf@text}{modern}=0%
+  \setmainfont{\TPDFTypeModern}
+\fi
+\ifnum\pdf@strcmp{\tpdf@text}{mechanist}=0%
+  \setmainfont{\TPDFTypeMechanist}
+\fi
+\ifnum\pdf@strcmp{\tpdf@text}{millenial}=0%
+  \setmainfont{\TPDFTypeMillenial}
+\fi
+\ifnum\pdf@strcmp{\tpdf@text}{grotesque}=0%
+  \setmainfont{\TPDFTypeGrotesque}
+\fi
+\ifnum\pdf@strcmp{\tpdf@text}{geometric}=0%
+  \setmainfont{\TPDFTypeGeometric}
+\fi
+
+% monospaced fonts
+\def\TPDFMonoTypewriter{Prestige Elite Std}
+\def\TPDFMonoProgrammer{PragmataPro}
+
+\ifnum\pdf@strcmp{\tpdf@mono}{typewriter}=0%
+  \setmonofont{\TPDFMonoTypewriter}
+\fi
+\ifnum\pdf@strcmp{\tpdf@text}{programmer}=0%
+  \setmonofont{\TPDFMonoProgrammer}
+\fi
+
+% face size
+\def\TPDFSizeTiny  {0.90}
+\def\TPDFSizeSmall {0.95}
+\def\TPDFSizeNormal{1.00}
+\def\TPDFSizeBig   {1.05}
+\def\TPDFSizeHuge  {1.10}
+
+\ifnum\pdf@strcmp{\tpdf@size}{normal}=0%
+  \defaultfontfeatures+{Scale = \TPDFSizeNormal}
+\fi
+\ifnum\pdf@strcmp{\tpdf@size}{small}=0%
+  \defaultfontfeatures+{Scale = \TPDFSizeSmall}
+\fi
+\ifnum\pdf@strcmp{\tpdf@size}{big}=0%
+  \defaultfontfeatures+{Scale = \TPDFSizeBig}
+\fi
+\ifnum\pdf@strcmp{\tpdf@size}{huge}=0%
+  \defaultfontfeatures+{Scale = \TPDFSizeHuge}
+\fi
+\ifnum\pdf@strcmp{\tpdf@size}{tiny}=0%
+  \defaultfontfeatures+{Scale = \TPDFSizeTiny}
+\fi
+
+\newcommand{\ligat}[1]{{\addfontfeatures{Ligatures=Historic} #1}}
+\newcommand{\swash}[1]{{\addfontfeatures{Style=Swash} #1}}
+\newcommand{\frakt}[1]{{\fontspec{Wittenberger Fraktur MT Std}[Scale = MatchLowercase] #1}}

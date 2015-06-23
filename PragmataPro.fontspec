@@ -1,0 +1,14 @@
+\defaultfontfeatures+[PragmataPro]%
+{ StylisticSet = { %1 % closed &
+                 , 2 % looped &
+                 , 3 % fraktur
+                 % , 4 % bold fraktur
+                 % , 5 % frames + c d h s
+                 % , 6 % swash on italics
+                 % , 7 % bold swash on italics
+                 % , 8 % bold serif
+                 % , 9 % italic serifs
+                 % , 10 % bold italic serifs
+                 }
+, Scale = MatchLowerCase
+}

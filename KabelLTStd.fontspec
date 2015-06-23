@@ -1,0 +1,5 @@
+\defaultfontfeatures+[Kabel LT Std]%
+{
+, UprightFont     = {KabelLTStd-Light}
+, BoldFont        = {KabelLTStd-Book}
+}

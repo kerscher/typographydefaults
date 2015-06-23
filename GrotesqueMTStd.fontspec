@@ -1,0 +1,11 @@
+\defaultfontfeatures+[Grotesque MT Std]%
+{
+, UprightFont     = {GrotesqueMTStd-Light}
+, ItalicFont      = {GrotesqueMTStd-LightItalic}
+% , SmallCapsFont   = {}
+, BoldFont        = {GrotesqueMTStd}
+, BoldItalicFont  = {GrotesqueMTStd-Italic}
+, SlantedFont     = {GrotesqueMTStd-LightItalic}
+, BoldSlantedFont = {GrotesqueMTStd-Italic}
+% , ItalicFeatures = {Scale = MatchLowercase}
+}

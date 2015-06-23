@@ -1,0 +1,8 @@
+\defaultfontfeatures+[Junicode]%
+{ StylisticSet = { 1  % nordic forms of ð and þ
+                 , 18 % more spacing for punctuation  
+                 % , 2  % insular letter forms
+                 }
+% , ItalicFeatures = {Scale = MatchLowercase}
+% , ItalicFont     = {Wittenberger Fraktur MT Std}
+}
