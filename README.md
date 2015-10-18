@@ -1,6 +1,6 @@
 # typographydefaults
 
-This is a LaTeX package that makes selecting quality font defaults easy and painless. Instead of fiddling with multiple options or doing things by trial and error, an author using this package can just choose a period in type design and be done with it. Currently supported periods are:
+This is a LaTeX package that makes selecting quality font defaults easy and painless. Instead of fiddling with multiple options or doing things by trial and error, an author using this package can just choose a period in type design and be done with it. Currently supported are:
 
 | Period    | Type family        |
 |-----------|--------------------|
