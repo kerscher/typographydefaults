@@ -1,9 +1,0 @@
-\defaultfontfeatures+[Grotesque MT Std]%
-{
-, UprightFont     = {GrotesqueMTStd-Light}
-, ItalicFont      = {GrotesqueMTStd-LightItalic}
-, BoldFont        = {GrotesqueMTStd}
-, BoldItalicFont  = {GrotesqueMTStd-Italic}
-, SlantedFont     = {GrotesqueMTStd-LightItalic}
-, BoldSlantedFont = {GrotesqueMTStd-Italic}
-}

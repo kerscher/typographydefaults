@@ -35,14 +35,14 @@
 
 % text type families
 \def\TPDFTypeMedieval {Junicode}
-\def\TPDFTypeHumanist {Centaur MT Std}
-\def\TPDFTypeGaralde  {Adobe Garamond Pro}
-\def\TPDFTypeRealist  {Fairfield LT Std}
-\def\TPDFTypeModern   {Didot LT Std}
-\def\TPDFTypeMechanist{Caecilia LT Std}
-\def\TPDFTypeMillenial{Warnock Pro}
-\def\TPDFTypeGrotesque{Grotesque MT Std}
-\def\TPDFTypeGeometric{Futura Std}
+\def\TPDFTypeHumanist {Coelacanth}
+\def\TPDFTypeGaralde  {EB Garamond}
+\def\TPDFTypeRealist  {PT Serif}
+\def\TPDFTypeModern   {CMU Serif}
+\def\TPDFTypeMechanist{CMU Concrete}
+\def\TPDFTypeMillenial{Source Serif Pro}
+\def\TPDFTypeGrotesque{HK Grotesk}
+\def\TPDFTypeGeometric{Orkney}
 
 \ifnum\pdf@strcmp{\tpdf@text}{medieval}=0%
   \setmainfont{\TPDFTypeMedieval}
@@ -73,14 +73,22 @@
 \fi
 
 % monospaced fonts
-\def\TPDFMonoTypewriter{Prestige Elite Std}
-\def\TPDFMonoProgrammer{EssentialPragmataPro}
+\def\TPDFMonoTypewriter{CMU Typewriter Text}
+\def\TPDFMonoSlender{Iosevka}
+\def\TPDFMonoWide{Monoid}
+\def\TPDFMonoSymbolic{Unifont}
 
 \ifnum\pdf@strcmp{\tpdf@mono}{typewriter}=0%
   \setmonofont{\TPDFMonoTypewriter}
 \fi
-\ifnum\pdf@strcmp{\tpdf@text}{programmer}=0%
-  \setmonofont{\TPDFMonoProgrammer}
+\ifnum\pdf@strcmp{\tpdf@text}{slender}=0%
+  \setmonofont{\TPDFMonoSlender}
+\fi
+\ifnum\pdf@strcmp{\tpdf@text}{wide}=0%
+  \setmonofont{\TPDFMonoWide}
+\fi
+\ifnum\pdf@strcmp{\tpdf@text}{symbolic}=0%
+  \setmonofont{\TPDFMonoSymbolic}
 \fi
 
 % face size
@@ -108,4 +116,3 @@
 
 \newcommand{\ligat}[1]{{\addfontfeatures{Ligatures=Historic} #1}}
 \newcommand{\swash}[1]{{\addfontfeatures{Style=Swash} #1}}
-\newcommand{\frakt}[1]{{\fontspec{Wittenberger Fraktur MT Std}[Scale = MatchLowercase] #1}}

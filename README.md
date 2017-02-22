@@ -1,25 +1,27 @@
 # typographydefaults
 
-This is a LaTeX package that makes selecting quality font defaults easy and painless. Instead of fiddling with multiple options or doing things by trial and error, an author using this package can just choose a period in type design and be done with it. Currently supported are:
+This is a LaTeX package that makes selecting quality open-source font defaults easy and painless. Instead of fiddling with multiple options or doing things by trial and error, an author using this package can just choose a period in type design and be done with it. Currently supported are:
 
-| Period    | Type family        |
-|-----------|--------------------|
-| Medieval  | Junicode           |
-| Humanist  | Centaur MT Std     |
-| Garalde   | Adobe Garamond Pro |
-| Realist   | Fairfield LT Std   |
-| Modern    | Didot LT Std       |
-| Mechanist | Caecilia LT Std    |
-| Millenial | Warnock Pro        |
-| Grotesque | Grotesque MT Std   |
-| Geometric | Futura Std         |
+| Period    | Type family                                                        | Parameter       |
+|-----------+--------------------------------------------------------------------+-----------------|
+| Medieval  | [Junicode](http://junicode.sourceforge.net/)                       | ```medieval```  |
+| Humanist  | [Coelacanth](https://fontlibrary.org/en/font/coelacanth)           | ```humanist```  |
+| Garalde   | [EB Garamond](http://www.georgduffner.at/ebgaramond/)              | ```garalde```   |
+| Realist   | [PT Serif](http://www.paratype.com/public/)                        | ```realist```   |
+| Modern    | [CMU Serif](http://cm-unicode.sourceforge.net/)                    | ```modern```    |
+| Mechanist | [CMU Concrete](http://cm-unicode.sourceforge.net/)                 | ```mechanist``` |
+| Millenial | [Source Serif Pro](http://adobe-fonts.github.io/source-serif-pro/) | ```millenial``` |
+| Grotesque | [HK Grotesk](https://fontlibrary.org/en/font/hk-grotesk)           | ```grotesque``` |
+| Geometric | [Orkney](https://fontlibrary.org/en/font/orkney)                   | ```geometric``` |
 
 There are also two fonts to choose for monospaced text sections:
 
-| “Period”   | Font               |
-|------------|--------------------|
-| Typewriter | Prestige Elite Std |
-| Programmer | PragmataPro        |
+| “Period”             | Font                                                  | parameter        |
+|----------------------+-------------------------------------------------------+------------------|
+| Typewriter           | CMU Typewriter Text                                   | ```typewriter``` |
+| Programmer Slender   | [Iosevka](https://be5invis.github.io/Iosevka/)        | ```slender```    |
+| Programmer Wide      | [Monoid](http://larsenwork.com/monoid/)               | ```wide```       |
+| Symbolic typesetting | [GNU Unifont](http://www.unifoundry.com/unifont.html) | ```symbolic```   |
 
 ## Requirements
 
@@ -32,17 +34,16 @@ There are also two fonts to choose for monospaced text sections:
     * fontspec
     * unicode-math
     * microtype
-* [Adobe Font Folio](http://www.adobe.com/products/fontfolio.html)
-* [Junicode](http://junicode.sourceforge.net/)
-* [Essential PragmataPro](http://www.fsd.it/fonts/pragmatapro.htm)
+    
+For font downloads use the links provided on the table above.
 
 ## Installation instructions
 
-If you have a recent distribution of [TeX Live](https://www.tug.org/texlive/), you most likely have all the needed CTAN packages, as well as XeTeX and XeLaTeX. If you don't, check you operating system package manager, or [install manually those first](https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages).
+If you have a recent distribution of [TeX Live](https://www.tug.org/texlive/), you most likely have all needed CTAN packages, as well as XeTeX and XeLaTeX. If you don't, check you operating system package manager, or [install manually those first](https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages).
 
-For Adobe Font Folio, you or (most likely) your employer only need to have bought and installed the font families listed above. Install all variants of the given family. A [font manager](http://fontmanager.github.io/) might be a good option to help you on this.
+Installing fonts on every major operating system can be done easily by opening the archives provided by foundry or distributors and simply double-clicking on each font to add it. There are better ways, but this is easy and compatible across most environments.
 
-Once the requirements are in place and assuming you're using TeX Live on Linux, you can install by:
+Once requirements are in place and assuming you're using TeX Live on Linux, you can install by:
 
 ```shell
 cd ~/texmf/tex/latex
@@ -50,19 +51,20 @@ git clone git://github.com/kerscher/typographydefaults ./typographydefaults
 texhash
 ```
 
-If you're using other TeX distribution, check on its documentation how to install a package or [read more about it here](https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages).
+If you're using other TeX distribution, check on its documentation how to install packages or [read more about it here](https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages).
 
 ## How to use it
 
-In the preamble, add the package and declare its options:
+On your preamble, add this package and declare its options. For example:
 
 ```latex
-\usepackage[ text = medieval
-           , mono = programmer
+\usepackage[ text = mechanist
+           , mono = typewriter
            ]{typographydefaults}
 ```
 
-Valid options for ```text``` are listed on the table above. To use them change the one you want to lowercase as in the example. For monospaced fonts, use the ```mono``` parameter. The order of parameters is irrelevant.
+Valid options for ```text``` and ```mono``` are listed on the table above.
+Order of parameters is irrelevant.
 
 ## Licence
 
