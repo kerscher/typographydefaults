@@ -16,12 +16,12 @@ This is a LaTeX package that makes selecting quality open-source font defaults e
 
 There are also two fonts to choose for monospaced text sections:
 
-| “Period”             | Font                                                  | parameter        |
-|----------------------|-------------------------------------------------------|------------------|
-| Typewriter           | CMU Typewriter Text                                   | ```typewriter``` |
-| Programmer Slender   | [Iosevka](https://be5invis.github.io/Iosevka/)        | ```slender```    |
-| Programmer Wide      | [Monoid](http://larsenwork.com/monoid/)               | ```wide```       |
-| Symbolic typesetting | [GNU Unifont](http://www.unifoundry.com/unifont.html) | ```symbolic```   |
+| “Period”             | Font                                                      | parameter        |
+|----------------------|-----------------------------------------------------------|------------------|
+| Typewriter           | [CMU Typewriter Text](http://cm-unicode.sourceforge.net/) | ```typewriter``` |
+| Programmer Slender   | [Iosevka](https://be5invis.github.io/Iosevka/)            | ```slender```    |
+| Programmer Wide      | [Monoid](http://larsenwork.com/monoid/)                   | ```wide```       |
+| Symbolic typesetting | [GNU Unifont](http://www.unifoundry.com/unifont.html)     | ```symbolic```   |
 
 ## Requirements
 
