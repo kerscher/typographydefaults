@@ -3,7 +3,7 @@
 This is a LaTeX package that makes selecting quality open-source font defaults easy and painless. Instead of fiddling with multiple options or doing things by trial and error, an author using this package can just choose a period in type design and be done with it. Currently supported are:
 
 | Period    | Type family                                                        | Parameter       |
-|-----------+--------------------------------------------------------------------+-----------------|
+|-----------|--------------------------------------------------------------------|-----------------|
 | Medieval  | [Junicode](http://junicode.sourceforge.net/)                       | ```medieval```  |
 | Humanist  | [Coelacanth](https://fontlibrary.org/en/font/coelacanth)           | ```humanist```  |
 | Garalde   | [EB Garamond](http://www.georgduffner.at/ebgaramond/)              | ```garalde```   |
@@ -17,7 +17,7 @@ This is a LaTeX package that makes selecting quality open-source font defaults e
 There are also two fonts to choose for monospaced text sections:
 
 | “Period”             | Font                                                  | parameter        |
-|----------------------+-------------------------------------------------------+------------------|
+|----------------------|-------------------------------------------------------|------------------|
 | Typewriter           | CMU Typewriter Text                                   | ```typewriter``` |
 | Programmer Slender   | [Iosevka](https://be5invis.github.io/Iosevka/)        | ```slender```    |
 | Programmer Wide      | [Monoid](http://larsenwork.com/monoid/)               | ```wide```       |
