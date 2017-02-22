@@ -1,4 +1,4 @@
-# typographydefaults
+# ```typographydefaults```
 
 This is a LaTeX package that makes selecting quality open-source font defaults easy and painless. Instead of fiddling with multiple options or doing things by trial and error, an author using this package can just choose a period in type design and be done with it. Currently supported are:
 
@@ -25,12 +25,11 @@ There are also two fonts to choose for monospaced text sections:
 
 ## Requirements
 
+* [LuaTeX](http://luatex.org/) and LuaLaTeX, or:
 * [XeTeX](http://xetex.sourceforge.net/) and XeLaTeX
 * [CTAN](http://www.ctan.org/) packages:
     * pdftexcmds
     * kvoptions
-    * xunicode
-    * xunicode-addon
     * fontspec
     * unicode-math
     * microtype
@@ -39,7 +38,7 @@ For font downloads use the links provided on the table above.
 
 ## Installation instructions
 
-If you have a recent distribution of [TeX Live](https://www.tug.org/texlive/), you most likely have all needed CTAN packages, as well as XeTeX and XeLaTeX. If you don't, check you operating system package manager, or [install manually those first](https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages).
+If you have a recent distribution of [TeX Live](https://www.tug.org/texlive/), you most likely have all needed CTAN packages, as well as LuaTeX, LuaLaTeX, XeTeX and XeLaTeX. If you don't, check you operating system package manager, or [install manually those first](https://en.wikibooks.org/wiki/LaTeX/Installing_Extra_Packages).
 
 Installing fonts on every major operating system can be done easily by opening the archives provided by foundry or distributors and simply double-clicking on each font to add it. There are better ways, but this is easy and compatible across most environments.
 
@@ -68,4 +67,4 @@ Order of parameters is irrelevant.
 
 ## Licence
 
-This package uses a 2-clause BSD-like licence. You can check it [here](LICENCE.md)
+This package uses a 2-clause BSD-like licence. You can check it [here](LICENCE.md).
