@@ -20,7 +20,6 @@
 \DeclareStringOption[normal]{size}     % text sizes
 \DeclareStringOption[garalde]{text}    % roman and italics for text
 \DeclareStringOption[programmer]{mono} % monospaced faces for code segments
-%\DeclareStringOption{emph}[italic]     % italics or blackletter for emphasis
 
 \ProcessKeyvalOptions{tpdf}
 
@@ -34,15 +33,15 @@
                     }
 
 % text type families
-\def\TPDFTypeMedieval {Junicode}
-\def\TPDFTypeHumanist {Coelacanth}
-\def\TPDFTypeGaralde  {EB Garamond}
-\def\TPDFTypeRealist  {PT Serif}
-\def\TPDFTypeModern   {CMU Serif}
-\def\TPDFTypeMechanist{CMU Concrete}
-\def\TPDFTypeMillenial{Source Serif Pro}
-\def\TPDFTypeGrotesque{HK Grotesk}
-\def\TPDFTypeGeometric{Orkney}
+\def\TPDFTypeMedieval      {Junicode}
+\def\TPDFTypeHumanist      {Coelacanth}
+\def\TPDFTypeGaralde       {EB Garamond}
+\def\TPDFTypeRealist       {PT Serif}
+\def\TPDFTypeDidone        {CMU Serif}
+\def\TPDFTypeMechanistic   {CMU Concrete}
+\def\TPDFTypeLinealHumanist{Source Sans Pro}
+\def\TPDFTypeGrotesque     {HK Grotesk}
+\def\TPDFTypeGeometric     {Orkney}
 
 \ifnum\pdf@strcmp{\tpdf@text}{medieval}=0%
   \setmainfont{\TPDFTypeMedieval}
@@ -56,14 +55,14 @@
 \ifnum\pdf@strcmp{\tpdf@text}{realist}=0%
   \setmainfont{\TPDFTypeRealist}
 \fi
-\ifnum\pdf@strcmp{\tpdf@text}{modern}=0%
-  \setmainfont{\TPDFTypeModern}
+\ifnum\pdf@strcmp{\tpdf@text}{didone}=0%
+  \setmainfont{\TPDFTypeDidone}
 \fi
-\ifnum\pdf@strcmp{\tpdf@text}{mechanist}=0%
-  \setmainfont{\TPDFTypeMechanist}
+\ifnum\pdf@strcmp{\tpdf@text}{mechanistic}=0%
+  \setmainfont{\TPDFTypeMechanistic}
 \fi
-\ifnum\pdf@strcmp{\tpdf@text}{millenial}=0%
-  \setmainfont{\TPDFTypeMillenial}
+\ifnum\pdf@strcmp{\tpdf@text}{linealhumanist}=0%
+  \setmainfont{\TPDFTypeLinealHumanist}
 \fi
 \ifnum\pdf@strcmp{\tpdf@text}{grotesque}=0%
   \setmainfont{\TPDFTypeGrotesque}

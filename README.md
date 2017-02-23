@@ -1,20 +1,22 @@
 # ```typographydefaults```
 
-This is a LaTeX package that makes selecting quality open-source font defaults easy and painless. Instead of fiddling with multiple options or doing things by trial and error, an author using this package can just choose a period in type design and be done with it. Currently supported are:
+This is a LuaLaTeX and XeLaTeX package that makes selecting quality open-source font family defaults easy and painless. Instead of fiddling with multiple options or doing things by trial and error, an author using this package can just choose a “period”, loosely based around [British standards for type classification](http://luc.devroye.org/britishstandards.html). Currently supported are:
 
-| Period    | Type family                                                        | Parameter       |
-|-----------|--------------------------------------------------------------------|-----------------|
-| Medieval  | [Junicode](http://junicode.sourceforge.net/)                       | ```medieval```  |
-| Humanist  | [Coelacanth](https://fontlibrary.org/en/font/coelacanth)           | ```humanist```  |
-| Garalde   | [EB Garamond](http://www.georgduffner.at/ebgaramond/)              | ```garalde```   |
-| Realist   | [PT Serif](http://www.paratype.com/public/)                        | ```realist```   |
-| Modern    | [CMU Serif](http://cm-unicode.sourceforge.net/)                    | ```modern```    |
-| Mechanist | [CMU Concrete](http://cm-unicode.sourceforge.net/)                 | ```mechanist``` |
-| Millenial | [Source Serif Pro](http://adobe-fonts.github.io/source-serif-pro/) | ```millenial``` |
-| Grotesque | [HK Grotesk](https://fontlibrary.org/en/font/hk-grotesk)           | ```grotesque``` |
-| Geometric | [Orkney](https://fontlibrary.org/en/font/orkney)                   | ```geometric``` |
+| Period          | Type family                                                        | Parameter            |
+|-----------------|--------------------------------------------------------------------|----------------------|
+| Medieval        | [Junicode](http://junicode.sourceforge.net/)                       | ```medieval```       |
+| Humanist        | [Coelacanth](https://fontlibrary.org/en/font/coelacanth)           | ```humanist```       |
+| Garalde         | [EB Garamond](http://www.georgduffner.at/ebgaramond/)              | ```garalde```        |
+| Realist         | [PT Serif](http://www.paratype.com/public/)                        | ```realist```        |
+| Didone          | [CMU Serif](http://cm-unicode.sourceforge.net/)                    | ```didone```         |
+| Mechanistic     | [CMU Concrete](http://cm-unicode.sourceforge.net/)                 | ```mechanistic```    |
+| Lineal Humanist | [Source Sans Pro](http://adobe-fonts.github.io/source-sans-pro/)   | ```linealhumanist``` |
+| Grotesque       | [HK Grotesk](https://fontlibrary.org/en/font/hk-grotesk)           | ```grotesque```      |
+| Geometric       | [Orkney](https://fontlibrary.org/en/font/orkney)                   | ```geometric```      |
 
-There are also two fonts to choose for monospaced text sections:
+The alternative _realist_ term was chosen for what are now commonly called _transitional_ faces. Likewise, despite grotesques and geometrics being lineals, it only makes sense to distinguish humanist from its lineal counterpart due to ambiguity.
+
+There are four styles to choose for monospaced text sections:
 
 | “Period”             | Font                                                      | parameter        |
 |----------------------|-----------------------------------------------------------|------------------|
@@ -23,10 +25,13 @@ There are also two fonts to choose for monospaced text sections:
 | Programmer Wide      | [Monoid](http://larsenwork.com/monoid/)                   | ```wide```       |
 | Symbolic typesetting | [GNU Unifont](http://www.unifoundry.com/unifont.html)     | ```symbolic```   |
 
+Such monospaced styles have no correspondence in classification that I'm aware of. _Typewriter_ are graphic faces that resemble imprinting ink on paper through a mechanical typewriter. _Programmer_ faces have: a combination of differentiation between similar symbols, such as between ```0``` and ```O```; contrast and shapes suitable for use in “inverted” colours of light text over dark backgrounds; and in some specimens ligatures for common glyph combinations that occur in computer code. Lastly, a _symbolic_ monospaced has high coverage of [Unicode](http://www.unicode.org/standard/standard.html) code points, making it suitable for typesetting scientific material with unusual glyphs.
+
+I recommend _typewriter_ for technical document citations, _programmer_ on either option for source code sections and _symbolic_ for Unicode-heavy typesetting such as [Agda](http://wiki.portal.chalmers.se/agda/pmwiki.php) proofs.
+
 ## Requirements
 
-* [LuaTeX](http://luatex.org/) and LuaLaTeX, or:
-* [XeTeX](http://xetex.sourceforge.net/) and XeLaTeX
+* [LuaTeX](http://luatex.org/) and LuaLaTeX, or [XeTeX](http://xetex.sourceforge.net/) and XeLaTeX
 * [CTAN](http://www.ctan.org/) packages:
     * pdftexcmds
     * kvoptions
@@ -57,7 +62,7 @@ If you're using other TeX distribution, check on its documentation how to instal
 On your preamble, add this package and declare its options. For example:
 
 ```latex
-\usepackage[ text = mechanist
+\usepackage[ text = mechanistic
            , mono = typewriter
            ]{typographydefaults}
 ```
