@@ -1,5 +1,7 @@
 # ```typographydefaults```
 
+![BSD3 license](https://img.shields.io/badge/licence-BSD%202--clause-blue.svg)
+
 This is a LuaLaTeX and XeLaTeX package that makes selecting quality open-source font family defaults easy and painless. Instead of fiddling with multiple options or doing things by trial and error, an author using this package can just choose a “period”, loosely based around [British standards for type classification](http://luc.devroye.org/britishstandards.html). Currently supported are:
 
 | Period          | Type family                                                        | Parameter            |
